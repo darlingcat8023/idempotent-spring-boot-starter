@@ -1,0 +1,18 @@
+- 1.3.0.RELEASE (2020-06-05)
+    1.所有IdempotentFallBack的实现类都会被Spring管理，可以注入依赖。不同注解中即使使用相同的实现类，也会被实例化为不同的bean
+
+- 1.2.0.RELEASE (2020-06-04)
+    1.新增AspectJ静态代理模式，需要使用ajc编译，javac下编译报错
+    2.使用字符串指定aspectj的自动配置类
+
+- 1.1.1.RELEASE (2020-05-27)
+    1.RedisIdempotentManager变为final类
+    2.修复了SetOption为UPSERT的问题，插入时应指定为SET_IF_ABSENT
+
+- 1.1.0.RELEASE (2020-05-27)
+    1.新增RedisIdempotentManager和Redis相关依赖
+    2.作废SimpleIdempotentManager，仅本地测试使用
+
+- 1.0.0.RELEASE (2020-05-25):
+    1.提交代码
+    2.增加默认fallback为DefaultIdempotentFallBack，该类仅抛出异常
